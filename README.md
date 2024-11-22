@@ -1,19 +1,55 @@
-Explanation for each function:
+# Bank Account Management System
 
-Add Account with the two structures CompteBancaire and Banque
-This function allows adding a new account to the Banque structure. There is a "counter" field that displays the number of accounts in the bank. This counter must not exceed the limit defined in the variable MAX_ACCOUNTS.
+This project implements a simple bank account management system using the structures `CompteBancaire` and `Banque`. It includes various functionalities such as adding, deleting, and updating accounts, as well as handling transactions.
 
-Delete Account (SuppCompte)
-This function allows deleting a bank account. First, the account to be deleted is searched for using a for loop. The target account's position is overwritten with the next account in the list, effectively removing it, and the size of the array is reduced by 1.
+## Features
 
-Update Balance (miseajourSolde)
-Since the program already includes two essential operations (adding and deleting accounts), it was deemed important to create a function to update the account balance. This function first searches for the account, then adds the desired amount to the balance.
+### 1. Add Account
+**Functionality**:  
+Adds a new account to the `Banque` structure.  
+- The `compteur` field keeps track of the total number of accounts.
+- The counter must not exceed the limit defined in the variable `MAX_ACCOUNTS`.
 
-Structures Transaction and TransactionList
-The Transaction structure is used to store details of transactions performed, including the amount and their status. The second structure, TransactionList, is used to store transactions that are either pending or in progress.
+---
 
-Money Withdrawal (Retrait D’argent)
-This function allows access to the customer's account using the account number. Once the account is located, it checks if the amount to be withdrawn is available. If not, it displays an "insufficient balance" message. If the account cannot be found, an error message is displayed.
+### 2. Delete Account (`SuppCompte`)
+**Functionality**:  
+Deletes an account from the bank.  
+- Searches for the account to be deleted using a loop.  
+- Overwrites the target account with the next account in the list.  
+- Reduces the size of the array by 1.
 
-Money Deposit (Dépôt d’argent)
-This function works similarly to the withdrawal function but does not need to check the account balance since the operation involves adding an amount without subtraction.
+---
+
+### 3. Update Balance (`miseajourSolde`)
+**Functionality**:  
+Updates the balance of an account.  
+- Searches for the target account.  
+- Adds the desired amount to the account balance.
+
+---
+
+### 4. Transaction Structures
+**Structures**:  
+- **`Transaction`**: Stores details of individual transactions, including the amount and their status.  
+- **`TransactionList`**: Maintains a list of transactions that are either pending or in progress.
+
+---
+
+### 5. Money Withdrawal (`Retrait D’argent`)
+**Functionality**:  
+Withdraws money from an account.  
+- Searches for the account using its account number.  
+- Checks if the balance is sufficient before processing the withdrawal.  
+- If the account is not found, an error message is displayed.  
+- If the balance is insufficient, a warning is shown.
+
+---
+
+### 6. Money Deposit (`Dépôt d’argent`)
+**Functionality**:  
+Deposits money into an account.  
+- Adds the specified amount to the account balance.  
+- Does not require balance verification.
+
+
